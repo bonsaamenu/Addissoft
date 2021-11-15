@@ -300,3 +300,23 @@ require get_template_directory() . '/inc/plugin-compatibility/plugin-compatibili
 if ( ! class_exists( 'wp_bootstrap_navwalker' )) {
     require_once(get_template_directory() . '/inc/wp_bootstrap_navwalker.php');
 }
+
+function my_custom_post_template(){
+
+    $args = array(
+        'labels' => array(
+            'name' => 'properties',
+            'singular_name' => 'property'
+        ),
+        'hierarchical' => false,
+        'public' => true,
+        'has_archive' => true,
+        'supports' => array('title', 'editor', 'thumbnail',),
+    );
+
+    register_post_type('Properties', $args);
+
+
+
+}
+add_action('init', 'my_custom_post_template');

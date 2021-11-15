@@ -6,10 +6,6 @@
  *
  * @package WP_Bootstrap_Starter
  */
-$image= get_field('header');
-$pic= $image['sizes']['large'];
-$alt = $image['alt'];
-$title = $image['title'];
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -31,28 +27,6 @@ $title = $image['title'];
 		<?php
 		endif; ?>
 	</header><!-- .entry-header -->
-	<section class="bg-light text-dark ">
-        <div class="container">
-            <div class="d-flex ">
-					<?php if($image):?>
-					<img class="img-fluid w-50" src="<?php echo $pic;?>" alt="<?php echo $alt?>" title="<?php echo $title?>"> 
-					<?php endif;?>
-				<div class="container px-4">
-					<div class="facts">
-						<?php the_field('facts');?>
-					</div>
-					<div class="row ">
-						<div class="bg-secondary col text-light">
-							<?php the_field('price');?>
-						</div>
-						<div class="bg-info col ">
-							<?php the_field('payment_plan');?>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
 	<div class="entry-content">
 		<?php
         if ( is_single() ) :
