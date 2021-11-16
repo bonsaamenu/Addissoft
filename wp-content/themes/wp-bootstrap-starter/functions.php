@@ -320,3 +320,10 @@ function my_custom_post_template(){
 
 }
 add_action('init', 'my_custom_post_template');
+
+function custom_posts_in_home( $query ) {
+    if ( is_home() && $query->is_main_query() )
+    $query->set( 'post_type', array( 'post', 'Properties') );
+    return $query;
+    }
+    add_filter( 'pre_get_posts', 'custom_conference_in_home_loop' );
