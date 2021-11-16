@@ -311,7 +311,7 @@ function my_custom_post_template(){
         'hierarchical' => false,
         'public' => true,
         'has_archive' => true,
-        'supports' => array('title', 'editor', 'thumbnail',),
+        'supports' => array('title', 'editor', 'thumbnail', 'post-formats'),
     );
 
     register_post_type('Properties', $args);
