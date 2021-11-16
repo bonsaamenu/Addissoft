@@ -79,7 +79,7 @@
                     if(get_theme_mod( 'header_banner_title_setting' )){
                         echo esc_attr( get_theme_mod( 'header_banner_title_setting' ) );
                     }else{
-                        echo 'WordPress + Bootstrap';
+                        echo 'Bonsa + Addissoftware';
                     }
                     ?>
                 </h1>
@@ -88,11 +88,11 @@
                     if(get_theme_mod( 'header_banner_tagline_setting' )){
                         echo esc_attr( get_theme_mod( 'header_banner_tagline_setting' ) );
                 }else{
-                        echo esc_html__('To customize the contents of this header banner and other elements of your site, go to Dashboard > Appearance > Customize','wp-bootstrap-starter');
+                        echo esc_html__('Bonsas test Project For addissoftware clik the link below to see the post','wp-bootstrap-starter');
                     }
                     ?>
                 </p>
-                <a href="#content" class="page-scroller"><i class="fa fa-fw fa-angle-down"></i></a>
+                
             </div>
         </div>
     <?php endif; ?>
