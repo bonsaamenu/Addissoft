@@ -326,4 +326,4 @@ function custom_posts_in_home( $query ) {
     $query->set( 'post_type', array( 'post', 'Properties') );
     return $query;
     }
-    add_filter( 'pre_get_posts', 'custom_conference_in_home_loop' );
+    add_filter( 'pre_get_posts', 'custom_posts_in_home' );
